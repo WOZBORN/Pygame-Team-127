@@ -1,0 +1,12 @@
+user_file_name = ".user"
+user_file_exists = os.path.isfile(user_file_name)
+if not user_file_exists:
+    logging.error(f"Файл {user_file_name} не найден. Создаю новый...")
+    with open(user_file_name, "w") as user_file:
+        user_file.write(input("Введи идентификатор пользователя: "))
+
+with open(user_file_name, "r") as user_file:
+    user_id = user_file.read()
+    if user_id == "":
+        logging.error(f"Идентификатор пользователя не найден. Положи его в файл {user_file_name}")
+        sys.exit(1)
