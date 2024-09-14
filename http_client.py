@@ -4,7 +4,7 @@ from models import User, Game, Player, Move
 
 class HttpClient:
     def __init__(self):
-        self.host = "https://f18e4325-89f0-4357-b6a4-2221454d52fb-00-24sehfqtbpqxn.janeway.replit.dev/"
+        self.host = "https://gsmaksim.pythonanywhere.com/"
 
     def get_user(self, user_id: str) -> User | None:
         try:
